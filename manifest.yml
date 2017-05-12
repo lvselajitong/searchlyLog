@@ -1,0 +1,11 @@
+applications:
+- name: elk
+  host: my-syslogs
+  domain: cfapps.io
+  instances: 1
+  memory: 1024M
+  path: target/searchlyLog-0.0.1.jar
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git
+  env:
+    SPRING_PROFILES_ACTIVE: cloud
+    APPLICATION_DOMAIN: my-sysogs.cfapps.io
